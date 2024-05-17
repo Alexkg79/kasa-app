@@ -1,0 +1,36 @@
+header {
+  background-color: white;
+  padding: 1rem 2rem;;
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      height: 40px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 2rem;
+
+      li {
+        a {
+          text-decoration: none;
+          color: black;
+          font-weight: 300;
+
+          &.active-link {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+          }
+        }
+      }
+    }
+  }
+}
