@@ -1,0 +1,56 @@
+.collapse-container {
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .collapse-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF6060;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+  
+    h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+  
+    .icon {
+      width: 10px;
+      height: 10px;
+      border-left: 2px solid white;
+      border-bottom: 2px solid white;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease;
+  
+      &.up {
+        transform: rotate(-45deg);
+      }
+  
+      &.down {
+        transform: rotate(45deg);
+      }
+    }
+  }
+  
+  .collapse-content {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      max-height: 0;
+      opacity: 0;
+    }
+    to {
+      max-height: 500px;
+      opacity: 1;
+    }
+  }
+  
