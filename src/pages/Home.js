@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Home.scss';
 import logements from '../monFichier.json';
 
@@ -10,12 +11,14 @@ function Home() {
       </div>
       <div className="logements-grid">
         {logements.map(logement => (
-          <div className="logement-card" key={logement.id}>
-            <img src={logement.cover} alt={logement.title} />
-            <div className="logement-title">
-              <h2>{logement.title}</h2>
+          <Link to={`/logement/${logement.id}`} key={logement.id} className="logement-link">
+            <div className="logement-card">
+              <img src={logement.cover} alt={logement.title} />
+              <div className="logement-title">
+                <h2>{logement.title}</h2>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

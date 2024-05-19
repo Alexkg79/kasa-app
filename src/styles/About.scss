@@ -3,11 +3,11 @@
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-  
+
     .banner {
       background-image: url("../assets/IMG_ABOUT.png");
       width: 100%;
-      max-width: 1200px; 
+      max-width: 1000px; 
       height: 150px; 
       background-size: cover;
       background-position: center;
@@ -31,7 +31,7 @@
   
     .collapses {
       width: 100%;
-      max-width: 1200px;
+      max-width: 1000px;
     }
   }
   
