@@ -1,0 +1,85 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+
+  .banner {
+    width: 100%;
+    max-width: 1200px; 
+    height: 150px; 
+    background-image: url("../assets/IMG_BANNER.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 10px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.469); 
+      border-radius: 10px;
+      z-index: 1;
+    }
+    
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      font-size: 25px;
+      padding: 1rem;
+      border-radius: 10px;
+      color: white;
+      z-index: 20;
+    }
+  }
+
+  .logements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .logement-card {
+    background: #ff6060;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .logement-title {
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      width: 90%;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.321);
+      font-size: 8px;
+      h2 {
+        margin: 0;
+      }
+    }
+  }
+}
