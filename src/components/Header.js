@@ -12,7 +12,6 @@ function Header() {
           <ul>
             <li>
               <NavLink 
-                exact 
                 to="/" 
                 className={({ isActive }) => isActive ? 'active-link' : undefined}
               >
