@@ -58,4 +58,8 @@
       }
     }
   }
-  
+  @media (max-width: 768px) {
+    .slideshow-counter {
+      visibility: hidden;
+    }
+  }
